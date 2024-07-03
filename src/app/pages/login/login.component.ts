@@ -24,7 +24,7 @@ export class LoginComponent {
 
   onSubmit() {
     const user = { cpf: this.cpf, senha: this.senha };
-    this.http.post('http://localhost/api/login.php', user)
+    this.http.post('http://localhost/crud-angular-php-api/api/login.php', user)
       .subscribe((response: any) => {
         if (response.message === "Login successful") {
           // Armazena o ID do usuário no local storage

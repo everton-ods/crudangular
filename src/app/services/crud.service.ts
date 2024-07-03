@@ -8,7 +8,8 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CrudService {
-  API: string = 'http://localhost/api/';
+  API: string = 'http://localhost/crud-angular-php-api/api/';
+  
 
   constructor(private clienteHttp: HttpClient) {}
 

@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">listar alunos</div>
+
+  <div class="table-responsive">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">CPF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let aluno of Aluno; let iControl = index">
+          <td>{{ aluno.nome }}</td>
+          <td>{{ aluno.cpf }}</td>
+
+          <!-- <td>
+            <a
+              class="btn btn-info"
+              [routerLink]="['/editar-aluno', aluno.id]"
+            >
+              Editar
+            </a>
+            |
+            <a
+              class="btn btn-danger"
+              (click)="excluiraluno(aluno.id)"
+              role="button"
+              >Excluir</a
+            >
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header">cadastrar escolas</div>
+  <div class="card-body">
+    <form [formGroup]="formularioEscola" (ngSubmit)="enviarDados()">
+        <div class="mb-3">
+            <label for="" class="form-label">Nome</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu nome"
+                formControlName= "nome"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Endereço</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu endereco"
+                formControlName= "endereco"
+            />
+          
+        </div>
+        
+        <div class="mb-3">
+            <label for="usuarios" class="form-label">Escolas Cadastradas:</label>
+            <select id="usuarios" class="form-control" >
+                <option *ngFor="let escola of Escola; let iControl=index" [value]="escola.nome">
+                    {{ escola.nome }}
+                </option>
+            </select>
+        </div>
+        
+       
+        <div class="btn-group" role="group" aria-label="Button group name">
+            <button
+                type="submit"
+                class="btn btn-success"
+            >
+                cadastrar
+            </button>
+            <button
+                type="button"
+                class="btn btn-success"
+            >
+                sair
+            </button>
+        </div>
+        
+        
+    </form>
+  </div>
+</div>

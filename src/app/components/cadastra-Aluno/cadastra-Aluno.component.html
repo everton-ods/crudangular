@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-header">cadastrar Aluno</div>
+  <div class="card-body">
+    <form [formGroup]="formularioAluno" (ngSubmit)="enviarDados()">
+        <div class="mb-3">
+            <label for="" class="form-label">Nome</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu nome"
+                formControlName= "nome"
+            />
+          
+        </div>
+      
+        <div class="mb-3">
+            <label for="" class="form-label">Cpf</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu cpf"
+                formControlName= "cpf"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Data de nascimento</label>
+            <input
+                type="date"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu cpf"
+                formControlName= "dataNascimento"
+            />
+          
+        </div>
+        
+        <div class="mb-3">
+            <label for="usuarios" class="form-label">Professores:</label>
+            <select id="usuarios" class="form-control" formControlName="DropProf">
+                <option *ngFor="let professor of Professor; let iControl=index" [value]="professor.nome">
+                    {{ professor.nome }}
+                </option>
+            </select>
+        </div>
+        
+       
+        <div class="btn-group" role="group" aria-label="Button group name">
+            <button
+                type="submit"
+                class="btn btn-success"
+            >
+                cadastrar
+            </button>
+            <button
+                type="button"
+                class="btn btn-success"
+            >
+                sair
+            </button>
+        </div>
+        
+        
+    </form>
+  </div>
+</div>

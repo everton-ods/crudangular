@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card-header">cadastrar</div>
+  <div class="card-body">
+    <form [formGroup]="formularioUsuarios" (ngSubmit)="enviarDados()">
+        <div class="mb-3">
+            <label for="" class="form-label">Nome</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu nome"
+                formControlName= "nome"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Cpf</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu cpf"
+                formControlName= "cpf"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Senha</label>
+            <input
+                type="password"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="digite sua senha"
+                formControlName= "senha"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Data de nasciemento</label>
+            <input
+                type="date"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu nome"
+                formControlName= "nascimento"
+            />
+            
+        </div>
+        <div class="btn-group" role="group" aria-label="Button group name">
+            <button
+                type="submit"
+                class="btn btn-success"
+            >
+                cadastrar
+            </button>
+            <button
+                type="button"
+                class="btn btn-success"
+            >
+                sair
+            </button>
+        </div>
+        
+        
+    </form>
+  </div>
+</div>

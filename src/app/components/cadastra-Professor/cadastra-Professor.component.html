@@ -1,0 +1,78 @@
+<div class="card">
+  <div class="card-header">cadastrar professores</div>
+  <div class="card-body">
+    <form [formGroup]="formularioProfessor" (ngSubmit)="enviarDados()">
+        <div class="mb-3">
+            <label for="" class="form-label">Nome</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu nome"
+                formControlName= "nome"
+            />
+          
+        </div>
+      
+        <div class="mb-3">
+            <label for="" class="form-label">Cpf</label>
+            <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu cpf"
+                formControlName= "cpf"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Data de nascimento</label>
+            <input
+                type="date"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu cpf"
+                formControlName= "dataNascimento"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Senha</label>
+            <input
+                type="password"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Digite seu senha"
+                formControlName= "senha"
+            />
+          
+        </div>
+        <div class="mb-3">
+            <label for="usuarios" class="form-label">Escolas:</label>
+            <select id="usuarios" class="form-control" formControlName="DropEscola">
+                <option *ngFor="let escola of Escola; let iControl=index" [value]="escola.nome">
+                    {{ escola.nome }}
+                </option>
+            </select>
+        </div>
+        
+       
+        <div class="btn-group" role="group" aria-label="Button group name">
+            <button
+                type="submit"
+                class="btn btn-success"
+            >
+                cadastrar
+            </button>
+            <button
+                type="button"
+                class="btn btn-success"
+            >
+                sair
+            </button>
+        </div>
+        
+        
+    </form>
+  </div>
+</div>

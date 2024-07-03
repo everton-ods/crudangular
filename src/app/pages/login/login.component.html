@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card mt-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">Login</h3>
+            <form (submit)="onSubmit()">
+              <div class="mb-3">
+                <label for="cpf" class="form-label">Cpf</label>
+                <input type="text" id="cpf" class="form-control" [(ngModel)]="cpf" name="cpf" required>
+              </div>
+              <div class="mb-3">
+                <label for="senha" class="form-label">senha</label>
+                <input type="password" id="senha" class="form-control" [(ngModel)]="senha" name="senha" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
